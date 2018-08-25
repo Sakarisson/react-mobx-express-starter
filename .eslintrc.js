@@ -8,6 +8,7 @@ module.exports = {
     "node": true
   },
   "rules": {
+    "no-underscore-dangle": "off",
     "jsx-a11y/anchor-is-valid": [
       "error", {
         "components": [ "Link" ],
