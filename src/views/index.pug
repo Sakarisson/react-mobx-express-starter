@@ -1,0 +1,10 @@
+doctype
+html
+  head
+    link(rel="stylesheet" href="/public/bootstrap.min.css")
+  body
+    noscript You need JavaScript to view this page.
+    div#root
+    if !dev
+      script!='var initialData=' + JSON.stringify(initialData)
+      script(src=`${bundleSrc}`)
