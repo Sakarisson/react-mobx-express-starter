@@ -1,0 +1,27 @@
+{
+  "name": "react-webpack4-mobx-express-starter",
+  "version": "1.0.0",
+  "description": "A starter kit for React projects based on React with Mobx, running on Express, compiled with Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakarisson/react-webpack4-mobx-express-starter.git"
+  },
+  "keywords": [
+    "react",
+    "mobx",
+    "webpack",
+    "express",
+    "nodejs",
+    "starter"
+  ],
+  "author": "kristian@sakarisson.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sakarisson/react-webpack4-mobx-express-starter/issues"
+  },
+  "homepage": "https://github.com/Sakarisson/react-webpack4-mobx-express-starter#readme"
+}
