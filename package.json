@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^4.0.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "fs": "0.0.1-security",
