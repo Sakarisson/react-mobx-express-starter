@@ -3,6 +3,8 @@ const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const routes = require('./routes');
+
 module.exports = async () => {
   const app = express();
 
@@ -14,6 +16,7 @@ module.exports = async () => {
   // Routes
   app.use('/build', express.static(path.join(__dirname, '../..', 'build', 'src')));
   app.use('/public', express.static(path.join(__dirname, '../..', 'public')));
+  app.use('/', routes);
 
   return app;
 };
