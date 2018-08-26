@@ -1,6 +1,13 @@
+/* eslint-disable no-console */
 require('dotenv').config();
-const express = require('express');
 
-const app = express();
+const app = require('./app');
 
-app.listen(12321);
+let port = process.env.SERVER_PORT;
+
+if (port == null) {
+  console.warn('SERVER_PORT not specified in .env, assuming 80');
+  port = 80;
+}
+
+app().then(initialized => initialized.listen(port, () => console.log(`Server listening on port ${port}`)));
