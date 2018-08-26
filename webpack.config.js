@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+
+require('dotenv').config();
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
@@ -8,6 +11,13 @@ const fs = require('fs');
 const baseOutputDirectory = path.join(__dirname, 'build');
 const srcOutputDirectory = path.join(baseOutputDirectory, 'src');
 const htmlOutputDirectory = path.join(baseOutputDirectory, 'html');
+
+let devPort = process.env.DEV_SERVER_PORT;
+
+if (devPort == null) {
+  console.warn('DEV_SERVER_PORT not specified in .env, assuming 3000');
+  devPort = 3000;
+}
 
 if (!fs.existsSync(baseOutputDirectory)) {
   fs.mkdirSync(baseOutputDirectory);
@@ -61,7 +71,7 @@ module.exports = (env, argv) => {
       ],
     },
     devServer: {
-      port: 3000,
+      port: devPort,
       open: true,
       historyApiFallback: true,
     },
