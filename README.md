@@ -13,8 +13,7 @@ This is a basic boilerplate for a stack that I have really fallen in love with -
 
 Further, the babel configuration is set up to support:
 
-- Syntax Decorators
-- Spread Syntax
+- Stage-1
 
 ## About
 The application uses Pug as its view engine.
