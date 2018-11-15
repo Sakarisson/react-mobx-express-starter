@@ -9,6 +9,7 @@ module.exports = {
   },
   "rules": {
     "no-underscore-dangle": "off",
+    "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/anchor-is-valid": [
       "error", {
         "components": [ "Link" ],

@@ -32,11 +32,16 @@ class PersonInformation extends React.Component {
 
   render() {
     const { person } = this.props;
+    const { firstName, lastName, fullName } = person;
     return (
       <div>
-        {person.fullName}
-        <input type="text" name="firstName" onChange={this.handleNameChange} />
-        <input type="text" name="lastName" onChange={this.handleNameChange} />
+        <form>
+          First name: <br />
+          <input type="text" name="firstName" onChange={this.handleNameChange} value={firstName} /> <br />
+          Last name: <br />
+          <input type="text" name="lastName" onChange={this.handleNameChange} value={lastName} />
+        </form>
+        <div>Full name: {fullName}</div>
       </div>
     );
   }
